@@ -1,0 +1,12 @@
+---
+- name: Simple Connectivity and Testing Playbook
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Test connectivity using ping
+      ansible.builtin.ping:
+
+    - name: Print a successful test message
+      ansible.builtin.debug:
+        msg: "Ansible is working! Connected to {{ inventory_hostname }} successfully."
