@@ -11,6 +11,6 @@
       ansible.builtin.debug:
         msg: "Ansible is working! Connected to {{ inventory_hostname }} successfully."
 
-  #  - name: Pause execution to keep the container alive for testing
-     # ansible.builtin.wait_for:
-      #  timeout: 120  # Keeps the container alive for 2 full minutes (120 seconds)
+    - name: Pause execution to keep the container alive for testing
+      ansible.builtin.wait_for:
+        timeout: 120  # Keeps the container alive for 2 full minutes (120 seconds)
